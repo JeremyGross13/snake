@@ -94,3 +94,24 @@ section {
 #btn-stop {
     margin-top: 20px;
 }
+
+#mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mobile button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 5em;
+    width: 100px;
+    height: 100px;
+}
+
+@media only screen and (max-device-width: 767px) {
+    #mobile {
+        display: flex;
+    }
+}

@@ -110,6 +110,22 @@ document.onkeydown = function (event) {
     }
 };
 
+function droite() {
+    direction = "droite";
+}
+
+function gauche() {
+    direction = "gauche";
+}
+
+function haut() {
+    direction = "haut";
+}
+
+function bas() {
+    direction = "bas";
+}
+
 document.getElementById("btn-reset").disabled = true;
 
 
