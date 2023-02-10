@@ -96,7 +96,7 @@ section {
 }
 
 #mobile {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
 }
@@ -105,7 +105,7 @@ section {
     background-color: #0f0c0c;
     border: none;
     color: #fff;
-    font-size: 5em;
+    font-size: 8em;
     width: 100px;
     height: 100px;
 }
