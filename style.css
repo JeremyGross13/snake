@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background-color: #0f0c0c;
+}
+
+h1 {
+    color: #e5e1e1;
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #e5e1e1;
+}
+
+span {
+    font-size: 1.4em;
+}
+
+header {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#btns,
+#personalisation {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#affichageScore {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score {
+    color: #e5e1e1;
+}
+
+#art-plateau {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#plateau {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.carre-serpent {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #C7F0BD;
+}
+
+#btn-start,
+#btn-reset,
+#btn-stop {
+    font-size: 1.1em;
+    width: 200px;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+    background-color: #235789;
+}
+
+#btn-reset,
+#btn-stop {
+    margin-top: 20px;
+}
