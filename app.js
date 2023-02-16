@@ -6,8 +6,10 @@ let gameOver = false;
 let affichageScore = document.getElementById('score');
 let score = 0;
 
-for (let i = 0; i < 5; i++) {
-    serpent.push({ x: i, y: 0 });
+function genereSerpent() {
+    for (let i = 0; i < 5; i++) {
+        serpent.push({ x: i, y: 0 });
+    }
 }
 
 function dessineSerpent() {
@@ -134,6 +136,7 @@ document.getElementById("btn-start").addEventListener("click", function () {
 });
 
 function jeu() {
+    genereSerpent();
     dessineSerpent();
     generePomme();
     dessinePomme();
