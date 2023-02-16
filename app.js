@@ -17,6 +17,7 @@ function dessineSerpent() {
         let carreSerpent = document.createElement("div");
         carreSerpent.style.left = unit.x * 10 + "px";
         carreSerpent.style.top = unit.y * 10 + "px";
+        carreSerpent.style.borderRadius = "2px"
         carreSerpent.classList.add("carre-serpent");
         plateau.appendChild(carreSerpent);
     });
@@ -137,7 +138,6 @@ function reset() {
     dessinePomme();
     score = 0;
 }
-
 
 function stop() {
     serpent = [];
