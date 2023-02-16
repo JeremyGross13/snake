@@ -7,7 +7,7 @@ let affichageScore = document.getElementById('score');
 let score = 0;
 
 function genereSerpent() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 5; i >= 0; i--) {
         serpent.push({ x: i, y: 0 });
     }
 }
@@ -71,15 +71,15 @@ function update() {
     }
 
     //vérifier une collision avec le corps du serpent
-    if (serpent[0].x != 0 && serpent[0].y != 0) {
-        for (let i = 1; i < serpent.length; i++) {
-            if (serpent[0].x == serpent[i].x && serpent[0].y == serpent[i].y) {
-                gameOver = true;
-                alert("Game Over!");
-                stop();
-            }
+    //if (serpent[0].x != 0 && serpent[0].y != 0) {
+    for (let i = 1; i < serpent.length; i++) {
+        if (serpent[0].x == serpent[i].x && serpent[0].y == serpent[i].y) {
+            gameOver = true;
+            alert("Game Over!");
+            stop();
         }
     }
+    //}
 
     //vérifier une collision avec les bords du plateau
     if (serpent[0].x == 50 || serpent[0].y == 50 || serpent[0].x == -1 || serpent[0].y == -1) {
@@ -94,7 +94,8 @@ function update() {
     dessinePomme();
 }
 
-
+/* Fonction anonyme pour définir la direction du serpent
+   en fonction des touches directionnelles du clavier  */
 document.onkeydown = function (event) {
     switch (event.keyCode) {
         case 37:
@@ -112,24 +113,7 @@ document.onkeydown = function (event) {
     }
 };
 
-function droite() {
-    direction = "droite";
-}
-
-function gauche() {
-    direction = "gauche";
-}
-
-function haut() {
-    direction = "haut";
-}
-
-function bas() {
-    direction = "bas";
-}
-
 document.getElementById("btn-reset").disabled = true;
-
 
 document.getElementById("btn-start").addEventListener("click", function () {
     this.disabled = true;
@@ -146,11 +130,9 @@ function jeu() {
 
 function reset() {
     serpent = [];
-    for (let i = 0; i < 5; i++) {
-        serpent.push({ x: i, y: 0 });
-    }
-    direction = "droite";
+    genereSerpent();
     dessineSerpent();
+    direction = "droite";
     generePomme();
     dessinePomme();
     score = 0;
